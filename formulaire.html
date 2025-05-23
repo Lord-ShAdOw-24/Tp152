@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de Contact</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #2c2c2c;
+      color: #ffffff;
+      border: 1px solid #444;
+      border-radius: 5px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #00aaff;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #008ecc;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulaire de Contact</h2>
+    <form action="#" method="post">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</body>
+</html>

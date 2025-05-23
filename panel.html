@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panneaux Pterodactyles</title>
+  <link rel="stylesheet" href="panel.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Panneaux Pterodactyles</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>  <div id="menu-overlay">
+    <div class="menu-content">
+      <ul>
+        <li onclick="navigateAndClose('contact')">Contact</li>
+        <li onclick="navigateAndClose('commande')">Commande</li>
+        <li onclick="navigateAndClose('tarifs')">Prix/Tarifs</li>
+        <li onclick="navigateAndClose('apropos')">À propos</li>
+        <li onclick="navigateAndClose('langues')">Langues</li>
+      </ul>
+    </div>
+  </div>  <section id="tarifs" class="panel-section">
+    <h2>Nos Panels</h2>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <div class="panel"><h3>Panel de 1Go</h3><p>Entrée de gamme - 1$</p></div>
+        <div class="panel"><h3>Panel 5G</h3><p>Idéal pour petits serveurs - 2$</p></div>
+        <div class="panel"><h3>Panel 10G</h3><p>Parfait pour la majorité des utilisateurs - 3$</p></div>
+        <div class="panel"><h3>Panel illimité</h3><p>Ressources sans limites - 4$</p></div>
+        <div class="panel"><h3>Admin Panel</h3><p>Accès administrateur complet - 12$</p></div>
+        <div class="panel"><h3>VPS</h3><p>Serveur privé virtuel<8Go-14$,16Go-18$></8Go-14$,16Go-18$> &</p></div>
+      </div>
+    </div>
+  </section>  
+  <section id="commande" class="panel-section">
+    <h2>Passer une commande</h2>
+    <div class="order-form">
+      <input type="text" id="whatsapp" placeholder="Votre numéro WhatsApp">
+      <select id="panneau">
+        <option value="Panel de 1Go">Panel de 1Go</option>
+        <option value="Panneau 5G">Panneau 5G</option>
+        <option value="Panneau 10G">Panneau 10G</option>
+        <option value="Panneau illimité">Panneau illimité</option>
+        <option value="Admin Panel">Admin Panel</option>
+        <option value="VPS">VPS|8Go/16Go|</option>
+      </select>
+      <select id="paiement">
+        <option value="PayPal">PayPal</option>
+        <option value="Mobile Money">Mobile Money</option>
+        <option value="Orange Money">Orange Money</option>
+        <option value="TapTap Send">TapTap Send</option>
+        <option value="MoneyGram">MoneyGram</option>
+        <option value="Crypto">Crypto</option>
+        <option value="Aucun des choix disponibles">Aucun des choix disponibles</option>
+      </select>
+      <button onclick="envoyerCommande()">Envoyer</button>
+    </div>
+  </section>  
+  <section id="contact" class="panel-section">
+  <h2>Contact</h2>
+  <p>Suivez-nous sur WhatsApp et Telegram et ne ratez rien.</p>
+
+  <div class="social-icons contact-layout">
+    <div class="icon-container">
+      <div class="arrow">⬇</div>
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" onclick="toggleLinks('whatsapp-links')" />
+      <div class="sub-icons" id="whatsapp-links">
+        <div class="sub-icon">
+          <a href="https://chat.whatsapp.com/J7RhOVC3KGMG5Go0lGiOdE" target="_blank">
+            <img src="https://img.icons8.com/color/48/00e676/whatsapp.png" />
+            <span>Join Community</span>
+          </a>
+        </div>
+        <div class="sub-icon">
+          <a href="https://whatsapp.com/channel/0029Vb5SsZ49RZAgIU7dkJ0V" target="_blank">
+            <img src="https://img.icons8.com/color/48/1de9b6/whatsapp.png" />
+            <span>Join Channel</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-container">
+      <div class="arrow">⬇</div>
+      <img src="https://img.icons8.com/color/48/000000/telegram-app.png" onclick="toggleLinks('telegram-links')" />
+      <div class="sub-icons" id="telegram-links">
+        <div class="sub-icon">
+          <a href="https://t.me/senku_tech_channel" target="_blank">
+            <img src="https://img.icons8.com/color/48/40c4ff/telegram-app.png" />
+            <span>Join Canal</span>
+          </a>
+        </div>
+        <div class="sub-icon">
+          <a href="https://t.me/senku_tech" target="_blank">
+            <img src="https://img.icons8.com/color/48/00b0ff/telegram-app.png" />
+            <span>Join Group</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.social-icons.contact-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  font-size: 20px;
+  animation: floatArrow 2s ease-in-out infinite;
+}
+
+@keyframes floatArrow {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(5px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+.sub-icons {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.sub-icons .sub-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-icons .sub-icon span {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #444;
+}
+
+@media screen and (min-width: 600px) {
+  .social-icons.contact-layout {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+</style>
+
+<script>
+function toggleLinks(id) {
+  const links = document.getElementById(id);
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+  
+  <section id="apropos" class="panel-section">
+    <h2>À propos</h2>
+    <p>Nous fournissons des panneaux puissants pour héberger vos serveurs Pterodactyl.</p>
+    <p>SENKU TECH met à votre disposition ses services. Notre Principe No1 : Satisfaire à tout prix</p>
+    <p class="gold-glow">NOBLESSE OBLIGÉ !!!</p>
+  </section>  
+  <section id="langues" class="panel-section">
+    <h2 id="langue-title">Langues</h2>
+    <label for="langue-select">Choisissez une langue :</label>
+    <select id="langue-select" onchange="changerLangue(this.value)">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="hi">हिन्दी (Hindi)</option>
+      <option value="ur">اردو (Urdu)</option>
+      </select>
+  </section>  
+  <footer>
+    <p>©࿇✞𝛭𝛪𝑇𝛮𝛪𝐶𝛫✞࿇.Tous droits réservés.</p>
+  </footer>  <script src="panel.js"></script></body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1 class="about-title">À propos</h1>
+        <p class="about-text">Salut moi c'est WALTER. Je suis développeur web, spécialisé dans les applications, les sites web et les bots. Ma maîtrise du front-end et du back-end a aiguisé mes compétences. Avec mes différentes compétences, je mets mes services à profit des gens un peu partout sur internet.</p>
+    </section>
+
+    <section id="skills">
+        <h1 class="skills-title">Compétences</h1>
+        <p>Développement web, développement d'applications, bots.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <div class="projects-container" id="scroll-container">
+    <div class="project-card">
+        <h3><a href="panel.html" class="project-link">Site de vente de serveurs</a></h3>
+        <p>Un site de vente de serveur Pterodactyl</p>
+    </div>
+    <div class="project-card">
+        <h3><a href="horloge.html" class="project-link">Horloge Numérique</a></h3>
+        <p>Un site d'horloge numérique avec quelques pays inclus</p>
+    </div>
+            <div class="project-card"><h3>Site de E-Bookshop</h3><p>un site de vente de  fourniture scolaire en ligne</p></div>
+            <div class="project-card"><h3>Site de Vote</h3><p>un site de vote pour des petits projets entre amis</p></div>
+    <div class="project-card">
+        <h3><a href="calculatrice.html" class="project-link">Calculatrice Scientifique</a></h3>
+        <p>Un site d'horloge numérique avec quelques pays inclus</p>
+    </div>
+            <div class="project-card"><h3>Site de Shopping</h3><p>vente de vetements et accessoires associés</p></div>
+            <div class="project-card"><h3>Biographie Etudiée de Quelques Haute Personalités</h3><p>Notamment au Cameroun</p></div>
+    <div class="project-card">
+        <h3><a href="tictactoe.html" class="project-link">Tictactoe Game</a></h3>
+        <p>Jeu Amical</p>
+    </div>
+            <div class="project-card"><h3>Calculatrice</h3><p>Calculatrice basique avec quelques constantes et valeure scientifique integré</p></div>
+            <div class="project-card"><h3>Chat Bot "mini IA"</h3><p>Un bot d'interaction</p></div>
+            <div class="project-card"><h3>Bot Whatsapp Multi-Device</h3><p>Un bot de gestion whatsapp"reduction de mouvement"</p></div>
+        </div>
+        <div class="scroll-buttons">
+    <button id="scroll-left">▶</button>
+    <button id="scroll-right">◀</button>
+</div>
+    </section>
+
+    <section id="contact">
+        <h1>Mes Informations</h1>
+        <p>Email : <a href="mailto:kingnaljks@example.com" class="blue-link">kingnaljks@example.com</a></p>
+        <p>GitHub : <a href="https://github.com/Lord-ShAdOw-24" target="_blank" class="blue-link">github.com/Lord-ShAdOw-24</a></p>
+
+        <section id="whatsapp">
+            <marquee behavior="scroll" direction="left" scrollamount="6">
+                <a href="https://whatsapp.com/channel/0029Vb5SsZ49RZAgIU7dkJ0V" target="_blank" class="whatsapp-link">
+                    Rejoins ma chaîne WhatsApp ici !
+                </a>
+            </marquee>
+        </section>
+
+        <div class="newsletter">
+            <p><strong>Soyez Informé de Mes Nouveaux Projets et ne Ratez Rien :</strong></p>
+            <form>
+                <input type="email" placeholder="Votre email ici..." class="email-input">
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://whatsapp.com/channel/0029Vb5SsZ49RZAgIU7dkJ0V" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://discord.gg/WjYJk2Hh" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="Discord">
+            </a>
+            <a href="https://github.com/Lord-ShAdOw-24" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub">
+            </a>
+        </div>
+        <p>FOLLOW ME</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>AOS.init();</script>
+    <script src="Portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem;
+    background-color: #111;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.about-title {
+    text-align: center;
+    font-size: 3rem;
+}
+.about-text {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.skills-title {
+    text-align: center;
+    font-size: 2rem;
+}
+.projects-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+.project-card {
+    background-color: #ccc;
+    color: #000;
+    border-radius: 20px;
+    padding: 1rem;
+    min-width: 250px;
+    flex-shrink: 0;
+}
+.newsletter {
+    text-align: center;
+    margin-top: 2rem;
+}
+.email-input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+}
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+.social-icons img {
+    margin: 0 10px;
+}
+.blue-link {
+    color: #00f;
+    text-decoration: underline;
+}
+.project-card {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.project-card.active {
+    transform: scale(1.1);
+    background-color: #8A2BE2; /* Violet vif */
+    color: white;
+}
+.scroll-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.scroll-buttons button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+button {
+  background: #0f0;
+  box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #0f0, 0 0 30px #0f0;
+  transform: scale(1.05);
+}
