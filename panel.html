@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Panneaux Pterodactyles</title>
+  <title>Panneaux Pterodactyles By 𝛭𝛪𝑇𝛮𝛪𝐶𝛫</title>
   <link rel="stylesheet" href="panel.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
@@ -28,26 +28,34 @@
     <h2>Nos Panels</h2>
     <div class="carousel-container">
       <div class="carousel" id="carousel">
-        <div class="panel"><h3>Panel de 1Go</h3><p>Entrée de gamme - 1$</p></div>
-        <div class="panel"><h3>Panel 5G</h3><p>Idéal pour petits serveurs - 2$</p></div>
-        <div class="panel"><h3>Panel 10G</h3><p>Parfait pour la majorité des utilisateurs - 3$</p></div>
-        <div class="panel"><h3>Panel illimité</h3><p>Ressources sans limites - 4$</p></div>
-        <div class="panel"><h3>Admin Panel</h3><p>Accès administrateur complet - 12$</p></div>
-        <div class="panel"><h3>VPS</h3><p>Serveur privé virtuel<8Go-14$,16Go-18$></8Go-14$,16Go-18$> &</p></div>
+        <div class="panel"><h3>Panel de 1Go</h3><p>Entrée de gamme - 1$/mois</p></div>
+        <div class="panel"><h3>Panel 5G</h3><p>Idéal pour petits serveurs - 2$/mois</p></div>
+        <div class="panel"><h3>Panel 10G</h3><p>Parfait pour la majorité des utilisateurs - 3$/mois</p></div>
+        <div class="panel"><h3>Panel illimité</h3><p>Ressources sans limites - 4$/mois</p></div>
+        <div class="panel"><h3>Panel illimité X6</h3><p>Offre Spéciale - 8$/mois</p></div>
+        <div class="panel"><h3>Admin Panel</h3><p>Accès administrateur complet - 12$/mois</p></div>
+        <div class="panel"><h3>VPS</h3><p>Serveur privé virtuel<8Go-14$/mois,16Go-18$/mois></p></div>
       </div>
     </div>
   </section>  
   <section id="commande" class="panel-section">
     <h2>Passer une commande</h2>
     <div class="order-form">
-      <input type="text" id="whatsapp" placeholder="Votre numéro WhatsApp">
-      <select id="panneau">
-        <option value="Panel de 1Go">Panel de 1Go</option>
-        <option value="Panneau 5G">Panneau 5G</option>
-        <option value="Panneau 10G">Panneau 10G</option>
-        <option value="Panneau illimité">Panneau illimité</option>
+      <input type="text" id="code" placeholder="Code Référentiel(Facultatif)">
+      <select id="panel">
+        <option value="Panel 1Go">Panel 1Go</option>
+        <option value="Panel 5G">Panel 5G</option>
+        <option value="Panel 10G">Panel 10G</option>
+        <option value="Panel illimité">Panel illimité</option>
+        <option value="Panel illimité X6">Panel illimité X6 "Spcial Offer"</option>
         <option value="Admin Panel">Admin Panel</option>
         <option value="VPS">VPS|8Go/16Go|</option>
+      </select>
+      <select id="durée">
+        <option value="1 Mois">1 Mois</option>
+        <option value="3 Mois">3 Mois"Reduction de 15%"</option>
+        <option value="5 Mois">6 Mois"Reduction de 30%"</option>
+        <option value="12 Mois">12 Mois"Reduction de 50%"</option>
       </select>
       <select id="paiement">
         <option value="PayPal">PayPal</option>
@@ -56,6 +64,7 @@
         <option value="TapTap Send">TapTap Send</option>
         <option value="MoneyGram">MoneyGram</option>
         <option value="Crypto">Crypto</option>
+        <option value="Banque">Paiement Bancaire</option>
         <option value="Aucun des choix disponibles">Aucun des choix disponibles</option>
       </select>
       <button onclick="envoyerCommande()">Envoyer</button>
