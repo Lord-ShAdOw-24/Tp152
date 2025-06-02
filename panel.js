@@ -1,4 +1,4 @@
-const audio = new Audio('sounds/menu-open.mp3');
+const audio = new Audio('music1.mp3');
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
@@ -18,11 +18,12 @@ function navigateAndClose(id) {
 }
 
 function envoyerCommande() {
-  const panel = document.getElementById("panneau").value;
-  const numero = document.getElementById("whatsapp").value;
+  const panel = document.getElementById("panel").value;
+  const code = document.getElementById("code").value;
   const moyen = document.getElementById("paiement").value;
-
-  const message = `Je veux un ${panel}, mon moyen de paiement est ${moyen}. Mon numéro WhatsApp est : ${numero}`;
+  const durée = document.getElementById("durée").value;
+  
+  const message = `Je veux un ${panel}, mon moyen de paiement est ${moyen}, pour une durée de ${durée}, référentiel : ${code}`;
   const numeroWhatsApp = "237689200244";
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
   
@@ -194,4 +195,4 @@ function toggleWhatsAppLinks() {
 function toggleTelegramLinks() {
   const links = document.getElementById('telegram-links');
   links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-}
+    }
