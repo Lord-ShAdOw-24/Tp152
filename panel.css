@@ -1,10 +1,24 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+body {
   font-family: 'Inter', sans-serif;
-  background-color: #000;
-  color: #fff;
+  color: #e0f8ff;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('background1.jpg') center center / cover no-repeat;
+  z-index: -1;
+  filter: brightness(1.1) contrast(1.05);
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -30,18 +44,16 @@ header {
   transition: 0.3s;
 }
 
-/* Menu Overlay */
 #menu-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: url('background.jpg') center center / cover no-repeat, rgba(0, 0, 0, 0.85);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
-
 #menu-overlay.active {
   display: flex;
   animation: zoomIn 0.4s ease;
@@ -56,6 +68,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 30px #00ff00, 0 0 60px #00ff00 inset;
 }
 
 .menu-content ul {
@@ -77,10 +90,8 @@ header {
   text-shadow: 0 0 10px #00ff00;
 }
 
-/* Panel Section */
 .panel-section {
   padding: 40px;
-  border-bottom: 2px solid #00ff00;
 }
 
 .panel {
@@ -97,7 +108,6 @@ header {
   transform: translateY(-5px);
 }
 
-/* Order Form */
 .order-form {
   background-color: #4b0082;
   border-radius: 16px;
@@ -128,7 +138,6 @@ button:hover {
   box-shadow: 0 0 10px red;
 }
 
-/* Animation */
 @keyframes zoomIn {
   from {
     transform: scale(0.2);
@@ -186,13 +195,11 @@ button:hover {
 
 @keyframes scrollPanels {
   0% {
-    transform: translateX(0);
-  }
+    transform: translateX(0);}
   100% {
-    transform: translateX(-50%);
-  }
+    transform: translateX(-50%);}
 }
 
 .carousel:hover {
   animation-play-state: paused;
-}
+    }
